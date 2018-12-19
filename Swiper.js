@@ -381,7 +381,9 @@ class Swiper extends Component {
       this.props.onSwipedLeft,
       -this.props.horizontalThreshold,
       0,
-      mustDecrementCardIndex
+      mustDecrementCardIndex,
+      this.setState({labelType: LABEL_TYPES.LEFT})
+
     )
   }
 
@@ -390,7 +392,9 @@ class Swiper extends Component {
       this.props.onSwipedRight,
       this.props.horizontalThreshold,
       0,
-      mustDecrementCardIndex
+      mustDecrementCardIndex,
+      this.setState({labelType: LABEL_TYPES.RIGHT})
+
     )
   }
 
@@ -399,7 +403,8 @@ class Swiper extends Component {
       this.props.onSwipedTop,
       0,
       -this.props.verticalThreshold,
-      mustDecrementCardIndex
+      mustDecrementCardIndex,
+      this.setState({labelType: LABEL_TYPES.TOP})
     )
   }
 
@@ -408,7 +413,8 @@ class Swiper extends Component {
       this.props.onSwipedBottom,
       0,
       this.props.verticalThreshold,
-      mustDecrementCardIndex
+      mustDecrementCardIndex,
+      this.setState({labelType: LABEL_TYPES.BOTTOM})
     )
   }
 
